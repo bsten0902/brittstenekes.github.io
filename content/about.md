@@ -2,7 +2,6 @@
 ---
 title: "About Me"
 layout: "about"
-url: "/about/"
 summary: Read about my academic background, career interests, and hobbies.
 date: 2021-05-10
 series: ["PaperMod"]
