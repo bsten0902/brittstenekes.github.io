@@ -1,5 +1,5 @@
 
-baseURL = ""
+baseURL = "https://homepage-britt.onrender.com"
 languageCode = "en-us"
 title = "Homepage"
 theme = "PaperMod"
