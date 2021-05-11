@@ -11,7 +11,6 @@ ShowReadingTime: false
 ShowBreadCrumbs: false
 ShowPostNavLinks: true
 hidemeta: true
-url: "/bdt/"
 ---
 
 Prior to taking the "Big Data Technologies" (ORIE 5270) course at Cornell University,
