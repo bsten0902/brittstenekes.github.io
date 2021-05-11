@@ -5,7 +5,7 @@ date: 2019-12-15
 weight: 2
 tags: [ "Queuing", "Messy Data"]
 author: "Brittany Stenekes"
-showToc: fa
+showToc: false
 ShowReadingTime: false
 ShowBreadCrumbs: false
 aliases: [/posts]
