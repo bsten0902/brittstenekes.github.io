@@ -23,7 +23,7 @@ weight = 5
 
 [[languages.en.menu.main]]
 name = "Tags"
-url = "tags/"
+url = "tags"
 weight = 10
 
 [params]
