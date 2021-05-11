@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Homepage</title>
+    <link>https://homepage-britt.onrender.com/tags/</link>
+    <description>Recent content in Tags on Homepage</description>
+    <image>
+      <url>https://homepage-britt.onrender.com/papermod-cover.png</url>
+      <link>https://homepage-britt.onrender.com/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://homepage-britt.onrender.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Messy Data</title>
+      <link>https://homepage-britt.onrender.com/tags/messy-data/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/tags/messy-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Queuing</title>
+      <link>https://homepage-britt.onrender.com/tags/queuing/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/tags/queuing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mental Health</title>
+      <link>https://homepage-britt.onrender.com/tags/mental-health/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/tags/mental-health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regression</title>
+      <link>https://homepage-britt.onrender.com/tags/regression/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/tags/regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Manufacturing</title>
+      <link>https://homepage-britt.onrender.com/tags/manufacturing/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/tags/manufacturing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimization</title>
+      <link>https://homepage-britt.onrender.com/tags/optimization/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/tags/optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simulation Modeling</title>
+      <link>https://homepage-britt.onrender.com/tags/simulation-modeling/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/tags/simulation-modeling/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
