@@ -6,7 +6,6 @@ summary: Read about my academic background, career interests, and hobbies.
 date: 2021-05-10
 series: ["PaperMod"]
 weight: 1
-aliases: ["/papermod-installation"]
 tags: []
 author: "Brittany Stenekes"
 showToc: false
