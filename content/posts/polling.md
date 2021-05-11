@@ -8,7 +8,7 @@ author: "Brittany Stenekes"
 showToc: false
 ShowReadingTime: false
 ShowBreadCrumbs: false
-
+aliases: [/posts]
 ---
 
 We recognize that long waiting times at a voting poll dissuades people from voting. 

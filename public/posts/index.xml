@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Homepage</title>
+    <link>https://homepage-britt.onrender.com/posts/</link>
+    <description>Recent content in Posts on Homepage</description>
+    <image>
+      <url>https://homepage-britt.onrender.com/papermod-cover.png</url>
+      <link>https://homepage-britt.onrender.com/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://homepage-britt.onrender.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Can I Make My Code Easy To Read?</title>
+      <link>https://homepage-britt.onrender.com/posts/bdt/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/posts/bdt/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>What Workplace Factors Affect Employee Mental Health?</title>
+      <link>https://homepage-britt.onrender.com/posts/mentalhealth/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/posts/mentalhealth/</guid>
+      <description>Making predictions with mental health survey data</description>
+    </item>
+    
+    <item>
+      <title>Which Machinery Should This Company Invest In?</title>
+      <link>https://homepage-britt.onrender.com/posts/manufacturinglayout/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/posts/manufacturinglayout/</guid>
+      <description>Reconfiguring production procedures and operating policies to eliminate backorders.</description>
+    </item>
+    
+    <item>
+      <title>What is Wrong With Polling Station Facilities?</title>
+      <link>https://homepage-britt.onrender.com/posts/polling/</link>
+      <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/posts/polling/</guid>
+      <description>Reconfiguring polling station layouts using queuing theory.</description>
+    </item>
+    
+    <item>
+      <title>How Can I Optimize Mechanic Response Time?</title>
+      <link>https://homepage-britt.onrender.com/posts/mechanicoptimization/</link>
+      <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://homepage-britt.onrender.com/posts/mechanicoptimization/</guid>
+      <description>Building a simulation model from Call Centre data.</description>
+    </item>
+    
+  </channel>
+</rss>

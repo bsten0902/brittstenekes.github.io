@@ -8,7 +8,7 @@ author: "Brittany Stenekes"
 showToc: false
 ShowReadingTime: false
 ShowBreadCrumbs: false
-
+aliases: [/posts]
 ---
 
 Along with three of my classmates, we developed recommendations

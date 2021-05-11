@@ -8,7 +8,7 @@ author: "Brittany Stenekes"
 showToc: false
 ShowReadingTime: false
 ShowBreadCrumbs: false
-
+aliases: [/posts]
 ---
 
 Toner Inc. devlops and manufactures document management systems.

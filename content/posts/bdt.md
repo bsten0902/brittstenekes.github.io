@@ -11,7 +11,7 @@ ShowReadingTime: false
 ShowBreadCrumbs: false
 ShowPostNavLinks: true
 hidemeta: true
-
+aliases: [/posts]
 comments: false
 description: "Desc Text."
 

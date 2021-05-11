@@ -8,7 +8,7 @@ author: "Brittany Stenekes"
 showToc: false
 ShowReadingTime: false
 ShowBreadCrumbs: false
-
+aliases: [/posts]
 ---
 
 The migration towards virtual work and remote learning 
