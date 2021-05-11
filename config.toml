@@ -1,0 +1,69 @@
+
+baseURL = "http://brittanystenekes.org/"
+languageCode = "en-us"
+title = "Homepage"
+theme = "PaperMod"
+
+[minify]
+disableXML = true
+
+[languages.en]
+languageName = "English"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "Projects"
+url = "archives"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "About"
+url = "about"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "Tags"
+url = "tags/"
+weight = 10
+
+[params]
+env = "production"
+description = "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+author = ["Brittany Stenekes"]
+defaultTheme = "auto"
+ShowShareButtons = false
+ShowReadingTime = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowToc = true
+images = [ "papermod-cover.png" ]
+
+  [params.homeInfoParams]
+  Title = "Brittany Shae Stenekes"
+  Content = """
+  
+  ![profilePic](/profileWS.png)  
+  Operations Research and Information Engineering  
+  Cornell University, MEng '21, BSc '20  
+  bss99@cornell.edu
+ 
+  607-767-5453  
+  <br/>  
+  Contributing to people's health and well-being using data science is a goal I hope to cultivate in my career. I am actively seeking a position as a Data Scientist or Mathematical Statistician.
+
+
+
+"""
+
+
+
+  [[params.socialIcons]]
+  name = "linkedin"
+  url = "http://www.linkedin.com/in/brittany-stenekes-bb8493173"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
