@@ -13,19 +13,19 @@
     <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/queuing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Can I Make My Code Easy To Read?</title>
-      <link>/bdt/</link>
+      <link>/posts/bdt/</link>
       <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>/bdt/</guid>
-      <description>Practice writing documentation and unit tests.</description>
+      <guid>/posts/bdt/</guid>
+      <description>Desc Text.</description>
     </item>
     
     <item>
       <title>What is Wrong With Polling Station Facilities?</title>
-      <link>/polling/</link>
+      <link>/posts/polling/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/polling/</guid>
+      <guid>/posts/polling/</guid>
       <description>Reconfiguring polling station layouts using queuing theory.</description>
     </item>
     
