@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Queuing on Homepage</title>
-    <link>/https://brittstenekes.github.io/tags/queuing/</link>
+    <link>/tags/queuing/</link>
     <description>Recent content in Queuing on Homepage</description>
     <image>
-      <url>/https:/brittstenekes.github.io/papermod-cover.png</url>
-      <link>/https:/brittstenekes.github.io/papermod-cover.png</link>
+      <url>papermod-cover.png</url>
+      <link>papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/https://brittstenekes.github.io/tags/queuing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/queuing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Can I Make My Code Easy To Read?</title>
-      <link>/https://brittstenekes.github.io/posts/bdt/</link>
+      <link>/posts/bdt/</link>
       <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/posts/bdt/</guid>
+      <guid>/posts/bdt/</guid>
       <description>Desc Text.</description>
     </item>
     
     <item>
       <title>What is Wrong With Polling Station Facilities?</title>
-      <link>/https://brittstenekes.github.io/posts/polling/</link>
+      <link>/posts/polling/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/posts/polling/</guid>
+      <guid>/posts/polling/</guid>
       <description>Reconfiguring polling station layouts using queuing theory.</description>
     </item>
     

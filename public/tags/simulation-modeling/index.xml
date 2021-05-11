@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Simulation Modeling on Homepage</title>
-    <link>/https://brittstenekes.github.io/tags/simulation-modeling/</link>
+    <link>/tags/simulation-modeling/</link>
     <description>Recent content in Simulation Modeling on Homepage</description>
     <image>
-      <url>/https:/brittstenekes.github.io/papermod-cover.png</url>
-      <link>/https:/brittstenekes.github.io/papermod-cover.png</link>
+      <url>papermod-cover.png</url>
+      <link>papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/https://brittstenekes.github.io/tags/simulation-modeling/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/simulation-modeling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Which Machinery Should This Company Invest In?</title>
-      <link>/https://brittstenekes.github.io/posts/manufacturinglayout/</link>
+      <link>/posts/manufacturinglayout/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/posts/manufacturinglayout/</guid>
+      <guid>/posts/manufacturinglayout/</guid>
       <description>Reconfiguring production procedures and operating policies to eliminate backorders.</description>
     </item>
     
     <item>
       <title>How Can I Optimize Mechanic Response Time?</title>
-      <link>/https://brittstenekes.github.io/posts/mechanicoptimization/</link>
+      <link>/posts/mechanicoptimization/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/posts/mechanicoptimization/</guid>
+      <guid>/posts/mechanicoptimization/</guid>
       <description>Building a simulation model from Call Centre data.</description>
     </item>
     

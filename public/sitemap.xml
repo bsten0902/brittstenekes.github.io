@@ -2,64 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/https://brittstenekes.github.io/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2021-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/posts/bdt/</loc>
+    <loc>/posts/bdt/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/posts/mentalhealth/</loc>
+    <loc>/posts/mentalhealth/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/posts/manufacturinglayout/</loc>
+    <loc>/posts/manufacturinglayout/</loc>
     <lastmod>2020-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/posts/polling/</loc>
+    <loc>/posts/polling/</loc>
     <lastmod>2019-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/posts/mechanicoptimization/</loc>
+    <loc>/posts/mechanicoptimization/</loc>
     <lastmod>2019-12-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2021-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/series/papermod/</loc>
+    <loc>/series/papermod/</loc>
     <lastmod>2021-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/series/</loc>
+    <loc>/series/</loc>
     <lastmod>2021-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/tags/messy-data/</loc>
+    <loc>/tags/messy-data/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/tags/queuing/</loc>
+    <loc>/tags/queuing/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/tags/mental-health/</loc>
+    <loc>/tags/mental-health/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/tags/regression/</loc>
+    <loc>/tags/regression/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/tags/manufacturing/</loc>
+    <loc>/tags/manufacturing/</loc>
     <lastmod>2020-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/tags/optimization/</loc>
+    <loc>/tags/optimization/</loc>
     <lastmod>2020-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/tags/simulation-modeling/</loc>
+    <loc>/tags/simulation-modeling/</loc>
     <lastmod>2020-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/https://brittstenekes.github.io/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>/https://brittstenekes.github.io/archives/</loc>
+    <loc>/archives/</loc>
   </url><url>
-    <loc>/https://brittstenekes.github.io/search/</loc>
+    <loc>/search/</loc>
   </url>
 </urlset>

@@ -1,5 +1,5 @@
 
-baseURL = "/https://brittstenekes.github.io/"
+baseURL = ""
 languageCode = "en-us"
 title = "Homepage"
 theme = "PaperMod"

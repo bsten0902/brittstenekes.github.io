@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Homepage</title>
-    <link>/https://brittstenekes.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Homepage</description>
     <image>
-      <url>/https:/brittstenekes.github.io/papermod-cover.png</url>
-      <link>/https:/brittstenekes.github.io/papermod-cover.png</link>
+      <url>papermod-cover.png</url>
+      <link>papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/https://brittstenekes.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Messy Data</title>
-      <link>/https://brittstenekes.github.io/tags/messy-data/</link>
+      <link>/tags/messy-data/</link>
       <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/tags/messy-data/</guid>
+      <guid>/tags/messy-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Queuing</title>
-      <link>/https://brittstenekes.github.io/tags/queuing/</link>
+      <link>/tags/queuing/</link>
       <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/tags/queuing/</guid>
+      <guid>/tags/queuing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mental Health</title>
-      <link>/https://brittstenekes.github.io/tags/mental-health/</link>
+      <link>/tags/mental-health/</link>
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/tags/mental-health/</guid>
+      <guid>/tags/mental-health/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Regression</title>
-      <link>/https://brittstenekes.github.io/tags/regression/</link>
+      <link>/tags/regression/</link>
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/tags/regression/</guid>
+      <guid>/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Manufacturing</title>
-      <link>/https://brittstenekes.github.io/tags/manufacturing/</link>
+      <link>/tags/manufacturing/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/tags/manufacturing/</guid>
+      <guid>/tags/manufacturing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Optimization</title>
-      <link>/https://brittstenekes.github.io/tags/optimization/</link>
+      <link>/tags/optimization/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/tags/optimization/</guid>
+      <guid>/tags/optimization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Simulation Modeling</title>
-      <link>/https://brittstenekes.github.io/tags/simulation-modeling/</link>
+      <link>/tags/simulation-modeling/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/https://brittstenekes.github.io/tags/simulation-modeling/</guid>
+      <guid>/tags/simulation-modeling/</guid>
       <description></description>
     </item>
     
