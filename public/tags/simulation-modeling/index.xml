@@ -13,19 +13,19 @@
     <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/simulation-modeling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Which Machinery Should This Company Invest In?</title>
-      <link>/posts/manufacturinglayout/</link>
+      <link>/manufacturinglayout/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/manufacturinglayout/</guid>
+      <guid>/manufacturinglayout/</guid>
       <description>Reconfiguring production procedures and operating policies to eliminate backorders.</description>
     </item>
     
     <item>
       <title>How Can I Optimize Mechanic Response Time?</title>
-      <link>/posts/mechanicoptimization/</link>
+      <link>/mechanicoptimization/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/mechanicoptimization/</guid>
+      <guid>/mechanicoptimization/</guid>
       <description>Building a simulation model from Call Centre data.</description>
     </item>
     
