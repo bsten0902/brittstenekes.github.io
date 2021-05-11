@@ -1,6 +1,208 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>How Can I Make My Code Easy To Read? | Homepage</title><meta name=keywords content="Queuing,Messy Data"><meta name=description content="Desc Text."><meta name=author content="Brittany Stenekes"><link rel=canonical href=https://canonical.url/to/page><link crossorigin=anonymous href=/assets/css/stylesheet.min.2d6dbfc6e0f8a1db1c9d082a76dc11d094328cf63f247bbc2421dfaa7f2bb170.css integrity="sha256-LW2/xuD4odscnQgqdtwR0JQyjPY/JHu8JCHfqn8rsXA=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=http://brittanystenekes.org/favicon.ico><link rel=icon type=image/png sizes=16x16 href=http://brittanystenekes.org/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=http://brittanystenekes.org/favicon-32x32.png><link rel=apple-touch-icon href=http://brittanystenekes.org/apple-touch-icon.png><link rel=mask-icon href=http://brittanystenekes.org/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><meta property="og:title" content="How Can I Make My Code Easy To Read?"><meta property="og:description" content="Desc Text."><meta property="og:type" content="article"><meta property="og:url" content="http://brittanystenekes.org/posts/bdt/"><meta property="og:image" content="http://brittanystenekes.org/papermod-cover.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-04-21T00:00:00+00:00"><meta property="article:modified_time" content="2021-04-21T00:00:00+00:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="http://brittanystenekes.org/papermod-cover.png"><meta name=twitter:title content="How Can I Make My Code Easy To Read?"><meta name=twitter:description content="Desc Text."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"http://brittanystenekes.org/posts/"},{"@type":"ListItem","position":2,"name":"How Can I Make My Code Easy To Read?","item":"http://brittanystenekes.org/posts/bdt/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"How Can I Make My Code Easy To Read?","name":"How Can I Make My Code Easy To Read?","description":"Desc Text.","keywords":["Queuing","Messy Data"],"articleBody":"Prior to taking the “Big Data Technologies” (ORIE 5270) course at Cornell University, I had learned to code in several languages: python, VBA, java, swift, AMPL, … etc.\nLearning to code was the easy part.\nLearning to write code that is concise and easy for the naked eye to understand–that’s another story.\nHere is my first shot at writing proper documentation and unit testing for the Node and LinkedList classes: #I referenced: https://realpython.com/linked-lists-python/ class Node: \"\"\" A class to represent a node ... Attributes ---------- data: any object The data contained by the node next: Node The reference to the next node in linked list \"\"\" def __init__(self, data): \"\"\" Creates node object and initializes the node contents and the next node reference. Parameters ---------- next: ListNode Reference to the next node. data: Any The data contained in the node. \"\"\" self.data = data self.next = None def get_Data(self): \"\"\" Views a node's data. Returns ---------- data: Any The data contained in the node. \"\"\" return self.data class LinkedList: def __init__(self, nodes=None): \"\"\" Creates LinkedList and initializes the head node. Also enables a linkedlist to be created by passing a list of data to the 'nodes' argument. Parameters ------------- nodes: List of Any List to create the linked list from, ordered in the desired order of linked list nodes. \"\"\" self.head = None if nodes is not None and nodes!=[]: node = Node(data=nodes.pop(0)) self.head = node for elem in nodes: node.next = Node(data=elem) node = node.next def __iter__(self): \"\"\" Makes the list iterable. This way, each consecutive node can in the list can be iterated over. \"\"\" node = self.head while node is not None: yield node node = node.next def add_first(self, node): \"\"\" Inserts a node at the beginning of the list. Parameters ---------- node: Node The node to add. \"\"\" node.next = self.head self.head = node def add_last(self, node): \"\"\" Inserts a node at the end of the list. Parameters ---------- node: Node The node to add. \"\"\" if self.head is None: self.head = node return for current_node in self: pass current_node.next = node def add_after(self, target_node_data, new_node): \"\"\" Inserts a node AFTER a particular node. Starting from the head, traverses the LinkedList until it reaches a node that contains the specified data. Then, inserts the new node by updating next node references. Parameters ---------- target_node_data: Any The data contained in the node that should be deleted. new_node: Any The node to add. \"\"\" if self.head is None: raise Exception(\"List is empty\") for node in self: if node.data == target_node_data: new_node.next = node.next node.next = new_node return raise Exception(\"Node with data '%s' not found\" % target_node_data) def remove_node(self, target_node_data): \"\"\" Deletes the node that contains the specified data. Starting from the head, traverses the LinkedList until it reaches a node that contains the specified data. Then, removes this node from the list by reassigning next node references. Parameters ---------- target_node_data: Any The data contained in the node that should be deleted. \"\"\" if self.head is None: raise Exception(\"List is empty\") if self.head.data == target_node_data: self.head = self.head.next return previous_node = self.head for node in self: if node.data == target_node_data: previous_node.next = node.next return previous_node = node raise Exception(\"Node with data '%s' not found\" % target_node_data) def length(self): \"\"\" Counts the number of nodes. Returns ---------- l: Int Number of nodes. \"\"\" if self.head is None: return 0 current = self.head l = 0 while current is not None: l+=1 current = current.next return l  And the unit testing:\nimport unittest from LinkedList import Node from LinkedList import LinkedList class TestLinkedList(unittest.TestCase): \"\"\" UnitTest Cases for the LinkedList Class. \"\"\" def test_empty(self): \"\"\" Checks that an empty list can be created. \"\"\" A=LinkedList([]) self.assertEqual(A.length(),0) def test_single(self): \"\"\" Checks that a single element list can be created. \"\"\" A=LinkedList([2]) self.assertEqual(A.length(),1) def test_multiple(self): \"\"\" Checks that a list with multiple types can be created. \"\"\" A=LinkedList([\"string\",1]) self.assertEqual(A.length(),2) def test_empty(self): \"\"\" Checks that a node can be inserted into an empty list. \"\"\" A,B,C=LinkedList([]),LinkedList([]),LinkedList([]) newnode=Node(1) with self.assertRaises(Exception): A.add_after(1,newnode) B.add_first(newnode) C.add_last(newnode) self.assertEqual(B.length(),1) self.assertEqual(C.length(),1) #inserting into single element list def test_single(self): \"\"\" Checks that a node can be inserted into a single element list. \"\"\" A,B,C=LinkedList([1]),LinkedList([1]),LinkedList([1]) newnode=Node(1) A.add_after(1,newnode) B.add_first(1,newnode) C.add_last(1,newnode) self.assertEqual(A.length(),2) self.assertEqual(B.length(),2) self.assertEqual(C.length(),2) #inserting into list with no match for target node def test_single(self): \"\"\" Checks that an Exception is raised when attempting to insert a node after data that doesn't exist in the list. \"\"\" A=LinkedList([1,2]) newnode=Node(1) with self.assertRaises(Exception): A.add_after(5,newnode) #deleting from empty list def test_delete_empty(self): \"\"\" Checks that an Exception is raised when attempting to delete a node from an empty list. \"\"\" A=LinkedList([]) with self.assertRaises(Exception): A.remove_node(5) #deleting from single element list def test_delete_single(self): \"\"\" Checks that a node can be deleted from an empty list. \"\"\" A=LinkedList([1]) A.remove_node(1) self.assertEqual(A.length(),0) #deleting from multi-element list def test_delete_multi(self): \"\"\" Checks that a node can be deleted from a multi-element list. \"\"\" A=LinkedList([1,6,8,4,9,5]) A.remove_node(1) self.assertEqual(A.length(),5) #deleting from list with multiple matches for target data def test_multimatch(self): \"\"\" Checks that a node can be deleted from a list with multiple matches for the target data. \"\"\" A=LinkedList([1,2,7,2,9]) A.remove_node(2) self.assertEqual(A.length(),4) #trying to delete a node with no data match in list def test_delete_nomatch(self): \"\"\" Checks that an Exception is raised when attempting to delete a node that is not in the list. \"\"\" A=LinkedList([1,2,7,2,9]) with self.assertRaises(Exception): A.remove_node(6) #check list length def test_length(self): \"\"\" Checks that the list length is correct. \"\"\" A,B,C=LinkedList([1,2,7,2,9]),LinkedList([]),LinkedList([1]) self.assertEqual(A.length(),5) self.assertEqual(B.length(),0) self.assertEqual(C.length(),1) def test_node_next(self): \"\"\" Checks that each node in linked list refers to the correct \"next\" node. \"\"\" A=LinkedList([5,2,7,3,1]) list = [] for n in A: list.append(n.get_Data()) self.assertEqual(list,[5,2,7,3,1]) def test_node_initial(self): \"\"\" Checks a node contains the data field being represented. \"\"\" N = Node(5) self.assertEqual(N.get_Data(),5)\t ","wordCount":"941","inLanguage":"en","datePublished":"2021-04-21T00:00:00Z","dateModified":"2021-04-21T00:00:00Z","author":{"@type":"Person","name":"Brittany Stenekes"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://brittanystenekes.org/posts/bdt/"},"publisher":{"@type":"Organization","name":"Homepage","logo":{"@type":"ImageObject","url":"http://brittanystenekes.org/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=http://brittanystenekes.org/ accesskey=h title="Homepage (Alt + H)">Homepage</a>
-<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=http://brittanystenekes.org/about title=About><span>About</span></a></li><li><a href=http://brittanystenekes.org/archives title=Projects><span>Projects</span></a></li><li><a href=http://brittanystenekes.org/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>How Can I Make My Code Easy To Read?</h1><div class=post-description>Desc Text.</div></header><div class=post-content><p>Prior to taking the &ldquo;Big Data Technologies&rdquo; (ORIE 5270) course at Cornell University,
-I had learned to code in several languages: python, VBA, java, swift, AMPL, &mldr; etc.</p><p><em>Learning to code was the easy part.<br>Learning to write code that is concise and easy for the naked eye to understand&ndash;that&rsquo;s another story.</em></p><h4 id=here-is-my-first-shot-at-writing-proper-documentation-and-unit-testing-for-the-node-and-linkedlist-classes>Here is my first shot at writing proper documentation and unit testing for the Node and LinkedList classes:<a hidden class=anchor aria-hidden=true href=#here-is-my-first-shot-at-writing-proper-documentation-and-unit-testing-for-the-node-and-linkedlist-classes>#</a></h4><pre><code>#I referenced: https://realpython.com/linked-lists-python/
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>How Can I Make My Code Easy To Read? | Homepage</title>
+<meta name="keywords" content="Queuing, Messy Data" />
+<meta name="description" content="Desc Text.">
+<meta name="author" content="Brittany Stenekes">
+<link rel="canonical" href="https://canonical.url/to/page" />
+<link crossorigin="anonymous" href="/https:/brittstenekes.github.io/assets/css/stylesheet.min.2d6dbfc6e0f8a1db1c9d082a76dc11d094328cf63f247bbc2421dfaa7f2bb170.css" integrity="sha256-LW2/xuD4odscnQgqdtwR0JQyjPY/JHu8JCHfqn8rsXA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/https:/brittstenekes.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="/https:/brittstenekes.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/https:/brittstenekes.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/https:/brittstenekes.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/https:/brittstenekes.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="/https:/brittstenekes.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.83.1" />
+<meta property="og:title" content="How Can I Make My Code Easy To Read?" />
+<meta property="og:description" content="Desc Text." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/https://brittstenekes.github.io/posts/bdt/" /><meta property="og:image" content="/https:/brittstenekes.github.io/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-04-21T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-04-21T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/https:/brittstenekes.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="How Can I Make My Code Easy To Read?"/>
+<meta name="twitter:description" content="Desc Text."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "/https://brittstenekes.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "How Can I Make My Code Easy To Read?",
+      "item": "/https://brittstenekes.github.io/posts/bdt/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How Can I Make My Code Easy To Read?",
+  "name": "How Can I Make My Code Easy To Read?",
+  "description": "Desc Text.",
+  "keywords": [
+    "Queuing", "Messy Data"
+  ],
+  "articleBody": "Prior to taking the “Big Data Technologies” (ORIE 5270) course at Cornell University, I had learned to code in several languages: python, VBA, java, swift, AMPL, … etc.\nLearning to code was the easy part.\nLearning to write code that is concise and easy for the naked eye to understand–that’s another story.\nHere is my first shot at writing proper documentation and unit testing for the Node and LinkedList classes: #I referenced: https://realpython.com/linked-lists-python/ class Node: \"\"\" A class to represent a node ... Attributes ---------- data: any object The data contained by the node next: Node The reference to the next node in linked list \"\"\" def __init__(self, data): \"\"\" Creates node object and initializes the node contents and the next node reference. Parameters ---------- next: ListNode Reference to the next node. data: Any The data contained in the node. \"\"\" self.data = data self.next = None def get_Data(self): \"\"\" Views a node's data. Returns ---------- data: Any The data contained in the node. \"\"\" return self.data class LinkedList: def __init__(self, nodes=None): \"\"\" Creates LinkedList and initializes the head node. Also enables a linkedlist to be created by passing a list of data to the 'nodes' argument. Parameters ------------- nodes: List of Any List to create the linked list from, ordered in the desired order of linked list nodes. \"\"\" self.head = None if nodes is not None and nodes!=[]: node = Node(data=nodes.pop(0)) self.head = node for elem in nodes: node.next = Node(data=elem) node = node.next def __iter__(self): \"\"\" Makes the list iterable. This way, each consecutive node can in the list can be iterated over. \"\"\" node = self.head while node is not None: yield node node = node.next def add_first(self, node): \"\"\" Inserts a node at the beginning of the list. Parameters ---------- node: Node The node to add. \"\"\" node.next = self.head self.head = node def add_last(self, node): \"\"\" Inserts a node at the end of the list. Parameters ---------- node: Node The node to add. \"\"\" if self.head is None: self.head = node return for current_node in self: pass current_node.next = node def add_after(self, target_node_data, new_node): \"\"\" Inserts a node AFTER a particular node. Starting from the head, traverses the LinkedList until it reaches a node that contains the specified data. Then, inserts the new node by updating next node references. Parameters ---------- target_node_data: Any The data contained in the node that should be deleted. new_node: Any The node to add. \"\"\" if self.head is None: raise Exception(\"List is empty\") for node in self: if node.data == target_node_data: new_node.next = node.next node.next = new_node return raise Exception(\"Node with data '%s' not found\" % target_node_data) def remove_node(self, target_node_data): \"\"\" Deletes the node that contains the specified data. Starting from the head, traverses the LinkedList until it reaches a node that contains the specified data. Then, removes this node from the list by reassigning next node references. Parameters ---------- target_node_data: Any The data contained in the node that should be deleted. \"\"\" if self.head is None: raise Exception(\"List is empty\") if self.head.data == target_node_data: self.head = self.head.next return previous_node = self.head for node in self: if node.data == target_node_data: previous_node.next = node.next return previous_node = node raise Exception(\"Node with data '%s' not found\" % target_node_data) def length(self): \"\"\" Counts the number of nodes. Returns ---------- l: Int Number of nodes. \"\"\" if self.head is None: return 0 current = self.head l = 0 while current is not None: l+=1 current = current.next return l  And the unit testing:\nimport unittest from LinkedList import Node from LinkedList import LinkedList class TestLinkedList(unittest.TestCase): \"\"\" UnitTest Cases for the LinkedList Class. \"\"\" def test_empty(self): \"\"\" Checks that an empty list can be created. \"\"\" A=LinkedList([]) self.assertEqual(A.length(),0) def test_single(self): \"\"\" Checks that a single element list can be created. \"\"\" A=LinkedList([2]) self.assertEqual(A.length(),1) def test_multiple(self): \"\"\" Checks that a list with multiple types can be created. \"\"\" A=LinkedList([\"string\",1]) self.assertEqual(A.length(),2) def test_empty(self): \"\"\" Checks that a node can be inserted into an empty list. \"\"\" A,B,C=LinkedList([]),LinkedList([]),LinkedList([]) newnode=Node(1) with self.assertRaises(Exception): A.add_after(1,newnode) B.add_first(newnode) C.add_last(newnode) self.assertEqual(B.length(),1) self.assertEqual(C.length(),1) #inserting into single element list def test_single(self): \"\"\" Checks that a node can be inserted into a single element list. \"\"\" A,B,C=LinkedList([1]),LinkedList([1]),LinkedList([1]) newnode=Node(1) A.add_after(1,newnode) B.add_first(1,newnode) C.add_last(1,newnode) self.assertEqual(A.length(),2) self.assertEqual(B.length(),2) self.assertEqual(C.length(),2) #inserting into list with no match for target node def test_single(self): \"\"\" Checks that an Exception is raised when attempting to insert a node after data that doesn't exist in the list. \"\"\" A=LinkedList([1,2]) newnode=Node(1) with self.assertRaises(Exception): A.add_after(5,newnode) #deleting from empty list def test_delete_empty(self): \"\"\" Checks that an Exception is raised when attempting to delete a node from an empty list. \"\"\" A=LinkedList([]) with self.assertRaises(Exception): A.remove_node(5) #deleting from single element list def test_delete_single(self): \"\"\" Checks that a node can be deleted from an empty list. \"\"\" A=LinkedList([1]) A.remove_node(1) self.assertEqual(A.length(),0) #deleting from multi-element list def test_delete_multi(self): \"\"\" Checks that a node can be deleted from a multi-element list. \"\"\" A=LinkedList([1,6,8,4,9,5]) A.remove_node(1) self.assertEqual(A.length(),5) #deleting from list with multiple matches for target data def test_multimatch(self): \"\"\" Checks that a node can be deleted from a list with multiple matches for the target data. \"\"\" A=LinkedList([1,2,7,2,9]) A.remove_node(2) self.assertEqual(A.length(),4) #trying to delete a node with no data match in list def test_delete_nomatch(self): \"\"\" Checks that an Exception is raised when attempting to delete a node that is not in the list. \"\"\" A=LinkedList([1,2,7,2,9]) with self.assertRaises(Exception): A.remove_node(6) #check list length def test_length(self): \"\"\" Checks that the list length is correct. \"\"\" A,B,C=LinkedList([1,2,7,2,9]),LinkedList([]),LinkedList([1]) self.assertEqual(A.length(),5) self.assertEqual(B.length(),0) self.assertEqual(C.length(),1) def test_node_next(self): \"\"\" Checks that each node in linked list refers to the correct \"next\" node. \"\"\" A=LinkedList([5,2,7,3,1]) list = [] for n in A: list.append(n.get_Data()) self.assertEqual(list,[5,2,7,3,1]) def test_node_initial(self): \"\"\" Checks a node contains the data field being represented. \"\"\" N = Node(5) self.assertEqual(N.get_Data(),5)\t ",
+  "wordCount" : "941",
+  "inLanguage": "en",
+  "datePublished": "2021-04-21T00:00:00Z",
+  "dateModified": "2021-04-21T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Brittany Stenekes"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/https://brittstenekes.github.io/posts/bdt/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Homepage",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/https:/brittstenekes.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="/https:/brittstenekes.github.io/" accesskey="h" title="Homepage (Alt + H)">Homepage</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/https:/brittstenekes.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="/https:/brittstenekes.github.io/archives" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="/https:/brittstenekes.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      How Can I Make My Code Easy To Read?
+    </h1>
+    <div class="post-description">
+      Desc Text.
+    </div>
+  </header> 
+  <div class="post-content"><p>Prior to taking the &ldquo;Big Data Technologies&rdquo; (ORIE 5270) course at Cornell University,
+I had learned to code in several languages: python, VBA, java, swift, AMPL, &hellip; etc.</p>
+<p><em>Learning to code was the easy part.<br>
+Learning to write code that is concise and easy for the naked eye to understand&ndash;that&rsquo;s another story.</em></p>
+<h4 id="here-is-my-first-shot-at-writing-proper-documentation-and-unit-testing-for-the-node-and-linkedlist-classes">Here is my first shot at writing proper documentation and unit testing for the Node and LinkedList classes:<a hidden class="anchor" aria-hidden="true" href="#here-is-my-first-shot-at-writing-proper-documentation-and-unit-testing-for-the-node-and-linkedlist-classes">#</a></h4>
+<pre><code>#I referenced: https://realpython.com/linked-lists-python/
 
 class Node:
     &quot;&quot;&quot;
@@ -184,7 +386,9 @@ class LinkedList:
           l+=1
           current = current.next
         return l
-</code></pre><p>And the unit testing:</p><pre><code>import unittest
+</code></pre>
+<p>And the unit testing:</p>
+<pre><code>import unittest
 from LinkedList import Node
 from LinkedList import LinkedList
 
@@ -329,8 +533,140 @@ class TestLinkedList(unittest.TestCase):
     Checks a node contains the data field being represented.
     &quot;&quot;&quot;
     N = Node(5)
-    self.assertEqual(N.get_Data(),5)	</code></pre></div><footer class=post-footer><ul class=post-tags><li><a href=http://brittanystenekes.org/tags/queuing/>Queuing</a></li><li><a href=http://brittanystenekes.org/tags/messy-data/>Messy Data</a></li></ul><nav class=paginav><a class=next href=http://brittanystenekes.org/posts/mentalhealth/><span class=title>Next Page »</span><br><span>What Workplace Factors Affect Employee Mental Health?</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=http://brittanystenekes.org/>Homepage</a></span>
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
-<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script><script>document.querySelectorAll('pre > code').forEach(b=>{const c=b.parentNode.parentNode,a=document.createElement('button');a.classList.add('copy-code'),a.innerText='copy';function d(){a.innerText='copied!',setTimeout(()=>{a.innerText='copy'},2e3)}a.addEventListener('click',e=>{if('clipboard'in navigator){navigator.clipboard.writeText(b.textContent),d();return}const a=document.createRange();a.selectNodeContents(b);const c=window.getSelection();c.removeAllRanges(),c.addRange(a);try{document.execCommand('copy'),d()}catch(a){}c.removeRange(a)}),c.classList.contains("highlight")?c.appendChild(a):c.parentNode.firstChild==c||(b.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?b.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(a):b.parentNode.appendChild(a))})</script></body></html>
+    self.assertEqual(N.get_Data(),5)	</code></pre>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="/https://brittstenekes.github.io/tags/queuing/">Queuing</a></li>
+      <li><a href="/https://brittstenekes.github.io/tags/messy-data/">Messy Data</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="/https://brittstenekes.github.io/posts/mentalhealth/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>What Workplace Factors Affect Employee Mental Health?</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer">
+    <span>&copy; 2021 <a href="/https:/brittstenekes.github.io/">Homepage</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Homepage</title>
-    <link>http://brittanystenekes.org/posts/</link>
+    <link>/https://brittstenekes.github.io/posts/</link>
     <description>Recent content in Posts on Homepage</description>
     <image>
-      <url>http://brittanystenekes.org/papermod-cover.png</url>
-      <link>http://brittanystenekes.org/papermod-cover.png</link>
+      <url>/https:/brittstenekes.github.io/papermod-cover.png</url>
+      <link>/https:/brittstenekes.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://brittanystenekes.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/https://brittstenekes.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Can I Make My Code Easy To Read?</title>
-      <link>http://brittanystenekes.org/posts/bdt/</link>
+      <link>/https://brittstenekes.github.io/posts/bdt/</link>
       <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://brittanystenekes.org/posts/bdt/</guid>
+      <guid>/https://brittstenekes.github.io/posts/bdt/</guid>
       <description>Desc Text.</description>
     </item>
     
     <item>
       <title>What Workplace Factors Affect Employee Mental Health?</title>
-      <link>http://brittanystenekes.org/posts/mentalhealth/</link>
+      <link>/https://brittstenekes.github.io/posts/mentalhealth/</link>
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://brittanystenekes.org/posts/mentalhealth/</guid>
+      <guid>/https://brittstenekes.github.io/posts/mentalhealth/</guid>
       <description>Making predictions with mental health survey data</description>
     </item>
     
     <item>
       <title>Which Machinery Should This Company Invest In?</title>
-      <link>http://brittanystenekes.org/posts/manufacturinglayout/</link>
+      <link>/https://brittstenekes.github.io/posts/manufacturinglayout/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://brittanystenekes.org/posts/manufacturinglayout/</guid>
+      <guid>/https://brittstenekes.github.io/posts/manufacturinglayout/</guid>
       <description>Reconfiguring production procedures and operating policies to eliminate backorders.</description>
     </item>
     
     <item>
       <title>What is Wrong With Polling Station Facilities?</title>
-      <link>http://brittanystenekes.org/posts/polling/</link>
+      <link>/https://brittstenekes.github.io/posts/polling/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://brittanystenekes.org/posts/polling/</guid>
+      <guid>/https://brittstenekes.github.io/posts/polling/</guid>
       <description>Reconfiguring polling station layouts using queuing theory.</description>
     </item>
     
     <item>
       <title>How Can I Optimize Mechanic Response Time?</title>
-      <link>http://brittanystenekes.org/posts/mechanicoptimization/</link>
+      <link>/https://brittstenekes.github.io/posts/mechanicoptimization/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://brittanystenekes.org/posts/mechanicoptimization/</guid>
+      <guid>/https://brittstenekes.github.io/posts/mechanicoptimization/</guid>
       <description>Building a simulation model from Call Centre data.</description>
     </item>
     
